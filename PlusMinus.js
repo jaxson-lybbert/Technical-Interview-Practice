@@ -45,6 +45,10 @@ function plusMinus(arr) {
   let positiveRatio = positiveNum / arr.length;
   let negativeRatio = negativeNum / arr.length;
   let zeroRatio = zeroNum / arr.length;
+
+  console.log(positiveRatio);
+  console.log(negativeRatio);
+  console.log(zeroRatio);
 }
 
 function main() {
