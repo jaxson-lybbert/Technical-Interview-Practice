@@ -25,9 +25,27 @@ function readLine() {
  
  The function accepts INTEGER_ARRAY arr as parameter.
  */
+let arr = [1, 2, 3, 4, 5];
 
 function miniMaxSum(arr) {
-  // Write your code here
+  let maxSum = 0;
+  let minSum = 0;
+
+  arr = arr.sort((a, b) => {
+    return a - b;
+  });
+
+  for (let i = 0; i < arr.length; i++) {
+    if (i != arr.length - 1) {
+      minSum += arr[i];
+    }
+
+    if (i != 0) {
+      maxSum += arr[i];
+    }
+  }
+
+  console.log(minSum + " " + maxSum);
 }
 
 function main() {
