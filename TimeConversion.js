@@ -37,9 +37,11 @@ function timeConversion(s) {
   let minutes = s.substring(3, 5);
   let seconds = s.substring(6, 8);
 
-  if (time == "AM" && hours == "12") {
-    hours == "00";
-  } else {
+  if (time === "AM" && hours === "12") {
+    hours = "00";
+  } else if (time === "PM" && hours === "12") {
+    hours = "12";
+  } else if (time === "PM") {
     hours = parseInt(hours) + 12;
   }
 
