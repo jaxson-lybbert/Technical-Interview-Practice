@@ -33,16 +33,10 @@ function readLine() {
 
 function matchingStrings(strings, queries) {
   let numOfQueries = [];
-  let queryMatch = 0;
 
-  for (let i = 0; i < strings.length; i++) {
-    for (let j = 0; j < queries.length; j++) {
-      if (strings[i] === queries[j]) {
-        queryMatch += 1;
-      }
-    }
-    numOfQueries.push(queryMatch);
-  }
+  numOfQueries = queries.map((query) => {
+    return strings.filter((string) => string === query).length;
+  });
 
   return numOfQueries;
 }
