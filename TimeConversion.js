@@ -29,8 +29,21 @@ function readLine() {
  * The function accepts STRING s as parameter.
  */
 
+// "00:00:00AM"
 function timeConversion(s) {
-  // Write your code here
+  const time = s.substring(8);
+
+  let hours = s.substring(0, 2);
+  let minutes = s.substring(3, 5);
+  let seconds = s.substring(6, 8);
+
+  if (time == "AM" && hours == "12") {
+    hours == "00";
+  } else {
+    hours = parseInt(hours) + 12;
+  }
+
+  return `${hours}:${minutes}:${seconds}`;
 }
 
 function main() {
