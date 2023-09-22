@@ -30,7 +30,11 @@ function readLine() {
  */
 
 function lonelyinteger(a) {
-  // Write your code here
+  let lonely = a.filter((value) => {
+    return a.indexOf(value) === a.lastIndexOf(value);
+  });
+
+  return lonely[0];
 }
 
 function main() {
