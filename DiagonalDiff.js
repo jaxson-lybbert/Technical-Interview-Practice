@@ -30,6 +30,8 @@ function readLine() {
  */
 
 function diagonalDifference(arr) {
+  // 2D array => Matrix!! For loop to land at the righ coordiantes (0,0), (1,1), (3,3) etc...
+
   let leftToRight = 0;
   let rightToLeft = 0;
 
